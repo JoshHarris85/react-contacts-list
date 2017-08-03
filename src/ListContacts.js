@@ -29,7 +29,7 @@ class ListContacts extends Component {
     let showingContacts
     if(query){
       // Escape regex and dont care about case
-      const match = new RegExp(escapeRegExp(query, 'i'))
+      const match = new RegExp(escapeRegExp(query), 'i')
       // match.test to compare match.test <- query and contact.name <- contacts array selected
       showingContacts = contacts.filter((contact) => match.test(contact.name))
     } else {
